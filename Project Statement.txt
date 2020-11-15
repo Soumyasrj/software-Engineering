@@ -1,0 +1,73 @@
+*INTRODUCTION:
+----------------------------
+-Here I  try Email Spam Filtering as it’s a very common topic in applied classification. It can be understood easily because we are experiencing spam filtering in our e-mails every day.
+-day to day live came acrsoss many spam message like fraud case about money winning,bank froud etc....
+-google implemented classifiaction of ham and spam inGMAIL ..
+As the email marketing has increased the no. of spam mesages increaesed,so gamil thoght if the more spam message world come the user may have bad impression on their sits so they add spam meessages
+in a separate folder for distinguish...
+-Machine learning techniqe now used to automatically filter the spam e-mail in very successful rate.In this model we will review some popular machine learing model such as Naive bayes,SVM and their
+applicapability to the problem of spam email classification.
+-Every time we can't get 100% efficiency.
+
+
+*PROJECT NAME:
+----------------------
+-Email spam detection.
+
+
+*PROBLEM STATEMENT:
+--------------------------------	
+- I implimented ML algorith and model   to know inwternal clkassification of ham and spam by adding some data and classify accordingly.
+-To make a user friendly and viewing easier,specific data is to be accessed and utilized.
+-Email Spam Filtering: A Python implementation with Scikit-learn. 
+
+
+*ALGORITHM USED IN IT:
+----------------------------
+#stemming:
+````````````````
+-stemming  methods to clean data other than removing stop words and lemmatization.
+-It is the  oldest algo,remove useless columns,outliers,converting plural to singular and past ,past continuous to present,repeating words are store only once.
+
+#tokenization:
+``````````````````
+-It is  the process of dividing text into meaningful piece.Depending on task at hand we can define our condition to divivde our input text into meaningful tokens.
+-word_tokeinzer is most commonly used tokenization algorithm.It splits a piece of texts into individual words based on a certain delimiter
+-since data raw,I pressproces the email and remove stopword (unused word like ie,are,a,an,the) ,punctutaions,conert all the letter to smallcase to get uniform data,
+and give clean text words.
+
+#vectorizer:
+````````````````
+-Vectorization is a method which makes u r code execute faster. 
+
+-tf-idf vectorizer:
+      #tf stands for term frequency .It summerizes how often a given a word appear with in the document.
+     # idf stands for inverse document frequency.This downscales words that appear a lot across document.
+      #purpose of tf-idf id to highlite the words which are frequent in a document but not across documents.
+      
+-countervectorizer:It creats a word vector and after supplying a new documents to it,it counts the presence of all the words/frequency of words in that documents after make cleaning of unnecessary words
+
+*ALALYSIS and PRCEDURE:
+----------------
+-from kaggle website get data which is containing 2 coloums and  5673 row ,data  having either spam/ham and mail.
+
+-Takes the raw input preprocess the data,finalizing the model  and give the predicting o/p !.
+
+-Cleaning the data:   Cleaning data is essential in order to reduce the probability of getting wrong results because some words have no influence on the classification.
+		So removing stop words, stemming, and lemmatization help in improving the results of Machine Learning algorithms.
+
+-Naive Bayes Algorithm: Naive Bayes can learn individual features importance but can’t determine the relationship among features. 
+		         Besides, the training time with Naive Bayes is significantly smaller as opposed to alternative methods and it doesn’t require much training data.
+		         Multinomial NB considers the frequency count (occurrences) of the features .
+
+- Support Vector Machines (SVM):SVM delivers high accuracy results because it uses an optimization procedure. 
+			      SVM builds a classifier by searching for a separating hyperplane which is optimal and maximises the margin that separates the categories (Here in our project that is  spam and ham).
+
+-Confusion matrix:  A Confusion matrix is an N x N matrix used for evaluating the performance of a classification model, where N is the number of target classes.
+		 The matrix compares the actual target values with those predicted by the machine learning model.
+		 This gives us a clear  view of how well our classification model is performing and what kinds of errors it is making.
+
+*CONCLUSION:
+------------------------
+-So, that was about my first steps in Email-Spam Filtering application! I hope that it’s helpful if you are thinking about starting a text-classification project!.
+ And I will continue sharing various reflections and experiments along the way. For next time, I will explore more the improvement/change of training data and features.
